@@ -1,0 +1,17 @@
+header {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    /* border: solid red; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inheader {
+    /* border: solid green; */
+    flex: 1;
+}
+
+#search {
+    text-align: right;
+}

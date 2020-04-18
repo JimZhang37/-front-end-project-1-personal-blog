@@ -1,0 +1,152 @@
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "nav"
+    "world1"
+    "world2"
+    "world3"
+    "history1"
+    "history2"
+    "history3"
+    "footer";
+}
+
+
+
+
+#world1 {
+    grid-area: world1;
+    /* background-color: aqua; */
+}
+
+#world2 {
+    grid-area: world2;
+}
+
+#world3 {
+    grid-area: world3;
+}
+
+#history1 {
+    grid-area: history1;
+    /* background-color: aqua; */
+}
+
+#history2 {
+    grid-area: history2;
+}
+
+#history3 {
+    grid-area: history3;
+}
+
+header {
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+    border-bottom: 1px solid black;
+}
+
+
+article {
+    height: 130px;
+    /* border: solid brown; */
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: 
+    "tt pic";
+}
+.text{
+    grid-area: tt;
+}
+.pic{
+    grid-area: pic;
+    height: 80%;
+}
+img {
+    max-width: 50px;
+    max-height: 80px;
+}
+
+figcaption {
+    font-size: 5px;
+    max-width: 100px;
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+article:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+article a {
+    color: brown;
+}
+
+
+
+footer {
+    grid-area: footer;
+
+    /* border: solid gray; */
+}
+
+.world .category {
+    color: blue;
+}
+
+.history .category {
+    color: green;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+
+@media(min-width: 900px) {
+    body {
+        display: grid;
+        margin-left: 50px;
+        margin-right: 50px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "header header header header header header header header" 
+        "nav nav nav nav nav nav nav nav"
+        "world1 world1 world1 world1 history1 history1 history1 history1" 
+        "world2 world2 world2 world2 history2 history2 history2 history2" 
+        "world3 world3 world3 world3 history3 history3 history3 history3" 
+        "footer footer footer footer footer footer footer footer";
+    }
+    img {
+        max-width: 100px;
+
+    }
+}

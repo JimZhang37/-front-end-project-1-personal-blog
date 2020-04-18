@@ -1,0 +1,76 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "blog" "aside" "footer";
+
+}
+
+header {
+    grid-area: header;
+
+}
+
+
+
+
+section {
+    grid-area: blog;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about {
+    grid-area: about;
+    background-color: darkgray;
+}
+.about>h2{
+    color: blue;
+}
+
+.achieves {
+    grid-area: achieves;
+    display: flex;
+    flex-direction: column;
+}
+.elsewhere {
+    grid-area: elsewhere;
+    display: flex;
+    flex-direction: column;
+}
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "about" "achieves" "elsewhere";
+}
+.navigation{
+    display: flex;
+    
+}
+.navigation .navitem {
+    border: solid;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+footer {
+    grid-area: footer;
+
+}
+
+@media(min-width: 900px){
+    body{
+        display: grid;
+        margin-left: 50px;
+        margin-right: 50px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "header header header header header header header header" 
+        "blog blog blog blog blog aside aside aside" 
+        "footer footer footer footer footer footer footer footer";
+
+    }
+}
