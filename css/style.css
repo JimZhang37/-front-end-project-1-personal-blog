@@ -1,3 +1,7 @@
+@import "header.css";
+@import "footer.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "nav.css";
 
 body {
     display: grid;
@@ -112,23 +116,7 @@ footer {
     color: green;
 }
 
-.crumbs ol {
-    list-style-type: none;
-    padding-left: 0;
-}
 
-.crumb {
-    display: inline-block;
-}
-
-.crumb a::after {
-    display: inline-block;
-    color: #000;
-    content: '>';
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0 3px;
-}
 
 
 @media(min-width: 900px) {

@@ -1,7 +1,12 @@
+@import "header.css";
+@import "footer.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "nav.css";
+
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "header" "blog" "aside" "footer";
+    grid-template-areas: "header" "nav" "blog" "aside" "footer";
 
 }
 
@@ -10,7 +15,10 @@ header {
 
 }
 
-
+nav{
+    grid-area: nav;
+    border-bottom: 1px solid black;
+}
 
 
 section {
@@ -69,6 +77,7 @@ footer {
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas: 
         "header header header header header header header header" 
+        "nav nav nav nav nav nav nav nav"
         "blog blog blog blog blog aside aside aside" 
         "footer footer footer footer footer footer footer footer";
 
